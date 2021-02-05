@@ -12,7 +12,41 @@
         
         <!-- script created from https://developers.google.com/maps/documentation/javascript/earthquakes -->
         <script>
+            let map;
 
+            function initMap() {
+                map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 2,
+                    center: { lat: -33.865427, lng: 151.196123 },
+                    mapTypeId: "terrain",
+                });
+
+                const script = document.createElement("script");
+                script.src =
+                    "https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js";
+                document.getElementsByTagName("head")[0].appendChild(script);
+                map.data.setStyle((feature) => {
+                    const magnitude = feature.getProperty("mag");
+                    return {
+                    icon: getCircle(magnitude),
+                    };
+                });
+            }
+
+            function getCircle(magnitude) {
+                return {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    fillColor: "yellow",
+                    fillOpacity: 0.3,
+                    scale: Math.pow(2, magnitude) / 2,
+                    strokeColor: "white",
+                    strokeWeight: 0.5,
+                };
+            }
+
+            function eqfeed_callback(results) {
+                map.data.addGeoJson(results);
+            }
         </script>
     </head>
     <body>
@@ -36,13 +70,13 @@
             </ul>
         </div>
         <div>
-            <h1>Ontario Provincial Parks</h1>
+            <h1>Earthquakes: Circle Size</h1>
         </div>
         <div id="maptutorial3b"></div>
         <div>
-            <p>This map, showing Ontario's Provincial Parks with clustering, was created with reference to:
-                <a class="sitelinks" href=https://developers.google.com/maps/documentation/javascript/marker-clustering>
-                    https://developers.google.com/maps/documentation/javascript/marker-clustering
+            <p>This map was created with reference to:
+                <a class="sitelinks" href=https://developers.google.com/maps/documentation/javascript/earthquakes>
+                    https://developers.google.com/maps/documentation/javascript/earthquakes
                 </a>
             </p>
         </div>
