@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Options Map</title>
+        <title>Ottawa Street Food</title>
         <style>
               /* body style adapted from my GEOM101 website https://shanemfleming.github.io/stylesheet.css */
             body {
@@ -22,6 +22,17 @@
 
             p {
                 padding: 5px;
+            }
+
+            /* created with reference to https://www.w3schools.com/css/css_link.asp and my personal website from GEOM101 https://shanemfleming.github.io/stylesheet.css*/
+            .sitelinks:link {
+                color: rgb(255, 213, 134);
+            }
+            .sitelinks:visited {
+                color: rgb(221, 115, 53);
+            }
+            .sitelinks:hover {
+                color: rgb(255, 157, 9);
             }
 
             #map {
@@ -104,6 +115,18 @@
         </script>
     </head>
     <body>
+        <div>
+            <h1>
+                Ottawa's Street Food Locations
+            </h1>
+        </div>
         <div id="map"></div>
+        <div>
+            <p>
+                This map (using data provided by <a class="sitelink" href="https://open.ottawa.ca/datasets/street-food-vendors?geometry=-75.889%2C45.349%2C-75.524%2C45.433" target="_blank">Open Ottawa</a>) 
+                presents the locations of Ottawa's many street food vendors. Higher density areas, such as downtown, have been clustered by the Marker Clusterer and will show the 
+                clustered locations when you zoom further in or click on the cluster.
+            </p>
+        </div>
     </body>
 </html>
