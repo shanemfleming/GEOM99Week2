@@ -64,6 +64,7 @@ p {
 }
 
 /* Pulled from https://developers.google.com/maps/documentation/javascript/overview#all */
-#map {
+.map {
     height: 700px;
+    width: 100%;
   }
