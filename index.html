@@ -35,6 +35,7 @@
         <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
 
         <!-- script created and modified from https://developers.google.com/maps/documentation/javascript/marker-clustering -->
+        <!-- location data obtained from https://open.ottawa.ca/datasets/street-food-vendors?geometry=-75.889%2C45.349%2C-75.524%2C45.433 -->
         <script>
             function initMap() {
                 const map = new google.maps.Map(document.getElementById("map"), {
@@ -42,14 +43,8 @@
                     center: { lat: 45.392909, lng: -75.716450 },
                 });
 
-                // Create an array of alphabetical characters used to label the markers.
                 const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-
-                // Add some markers to the map.
-                // Note: The code uses the JavaScript Array.prototype.map() method to
-                // create an array of markers based on a given "locations" array.
-                // The map() method here has nothing to do with the Google Maps API.
                 const markers = locations.map((location, i) => {
                     return new google.maps.Marker({
                         position: location,
@@ -57,10 +52,8 @@
                     });
                 });
 
-                // Add a marker clusterer to manage the markers.
                 new MarkerClusterer(map, markers, {
-                    imagePath:
-                    "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+                    imagePath:"images/f",
                 });
                 }
 
