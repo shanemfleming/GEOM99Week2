@@ -45,8 +45,10 @@
                 // Create an array of alphabetical characters used to label the markers.
                 const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-                const infowindow = new google.maps.InfoWindow({
-                    content: "contentString",
+                const infowindow = locations.map((location, i) => {
+                    return new google.maps.InfoWindow({
+                        content: "contentString",
+                    });
                 });
 
                 // Add some markers to the map.
@@ -55,8 +57,8 @@
                 // The map() method here has nothing to do with the Google Maps API.
                 const markers = locations.map((location, i) => {
                     return new google.maps.Marker({
-                    position: location,
-                    label: labels[i % labels.length],
+                        position: location,
+                        label: labels[i % labels.length],
                     });
                 });
 
