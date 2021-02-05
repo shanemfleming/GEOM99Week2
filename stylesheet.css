@@ -1,0 +1,69 @@
+  /* body style borrowed from my GEOM101 website https://shanemfleming.github.io/stylesheet.css */
+body {
+	background-color: #393939;
+	color: white;
+	font-family: Georgia, "Times New Roman", serif;
+	margin-top: 35px;
+	margin-bottom: 50px;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+/* style borrowed from my GEOM101 website https://shanemfleming.github.io/stylesheet.css */
+h1 {
+    font-family: Verdana, Helvetica, sans-serif;
+    margin-bottom: 45px;
+}
+
+p {
+    padding: 5px;
+}
+
+.textcentre {
+	text-align: center;
+}
+
+/* Pulled from GEOM101 website */
+/* created with reference to https://www.w3schools.com/css/css_link.asp */
+.sitelinks:link {
+	color: orange;
+}
+.sitelinks:visited {
+	color: chocolate;
+}
+.sitelinks:hover {
+	color: gold;
+}
+
+/* Navbar design pulled from my GEOM101 website */
+/* for nav bar design, I referenced https://www.w3schools.com/css/css_navbar.asp and adjusted the format for my website */
+.navbarul {
+	background-color: #424242;
+	list-style-type: none;
+	margin-bottom: 25px;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.navbarli {
+	float: left;
+	display: block;
+	padding: 15px 20px;
+	text-align: center;
+}
+.navbartxt {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+	color: orange;
+	text-decoration: none;
+}
+.navbaract {
+	text-decoration: underline;
+}
+
+/* Pulled from https://developers.google.com/maps/documentation/javascript/overview#all */
+#map {
+    height: 700px;
+  }
