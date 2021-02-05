@@ -57,10 +57,6 @@
                     });
                 });
 
-                markers.addListener("click", () => {
-                    infowindow.open(map, markers);
-                });
-
                 // Add a marker clusterer to manage the markers.
                 new MarkerClusterer(map, markers, {
                     imagePath:
