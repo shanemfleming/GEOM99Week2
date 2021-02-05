@@ -45,11 +45,6 @@
                 // Create an array of alphabetical characters used to label the markers.
                 const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-                const infowindow = locations.map((location, i) => {
-                    return new google.maps.InfoWindow({
-                        content: "contentString",
-                    });
-                });
 
                 // Add some markers to the map.
                 // Note: The code uses the JavaScript Array.prototype.map() method to
@@ -67,10 +62,10 @@
                 });
 
                 // Add a marker clusterer to manage the markers.
-/*                 new MarkerClusterer(map, markers, {
+                new MarkerClusterer(map, markers, {
                     imagePath:
                     "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-                }); */
+                });
                 }
 
                 const locations = [
